@@ -1,0 +1,117 @@
+DROP TABLE IF EXISTS `chongzhi_user`;
+CREATE TABLE `chongzhi_user`  (
+  `id` bigint(32) NOT NULL AUTO_INCREMENT COMMENT '用户id',
+
+  `username` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '用户名',
+  `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '密码',
+
+)
+DELETE FROM cardInfo;
+ALTER TABLE cardInfo AUTO_INCREMENT=1;
+
+DROP TABLE IF EXISTS `cardInfo`;
+CREATE TABLE `NewTable` (
+`id`  int NOT NULL AUTO_INCREMENT ,
+`userId`  varchar(255) NOT NULL COMMENT '用户id' ,
+`cardNo`  varchar(255) CHARACTER SET utf8 NOT NULL COMMENT '卡号' ,
+`cardPwd`  varchar(255) CHARACTER SET utf8 NOT NULL COMMENT '密码' ,
+`isExp`  varchar(255) NOT NULL DEFAULT 0 COMMENT '0否   1导出' ,
+`is_delete`  varchar(255) NOT NULL DEFAULT 0 COMMENT '0否   1删除' ,
+`create_time`  datetime NOT NULL ,
+`update_time`  datetime NULL ,
+PRIMARY KEY (`id`)
+)
+;
+
+
+-- Table structure for settings
+-- ----------------------------
+DROP TABLE IF EXISTS `settings`;
+CREATE TABLE `settings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `swhLitIpActi` varchar(4) NOT NULL DEFAULT '0' COMMENT '限制同一个ip激活开关 0开 1关闭',
+  `limitIpActi` int(255) DEFAULT '0' COMMENT '限制同一个ip激活数量',
+  `swhLitAcctActi` varchar(4) NOT NULL DEFAULT '0' COMMENT '限制同一个id账号激活开关 0开 1关闭',
+  `litAcctActi` int(11) DEFAULT NULL COMMENT '限制同一个id账号只能激活数量',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of settings
+-- ----------------------------
+INSERT INTO `settings` VALUES ('1', '1', '5', '1', '1');
+
+
+select cardNo,cardPwd from cardinfo where id <=50000
+select cardNo,cardPwd from cardinfo where id >50000 and id <=100000
+
+select cardNo,cardPwd from cardinfo where id >100000 and id <=150000
+select cardNo,cardPwd from cardinfo where id >150000 and id <=200000
+
+select cardNo,cardPwd from cardinfo where id >200000 and id <=250000
+select cardNo,cardPwd from cardinfo where id >250000 and id <=300000
+
+select cardNo,cardPwd from cardinfo where id >300000 and id <=350000
+select cardNo,cardPwd from cardinfo where id >350000 and id <=400000
+
+select cardNo,cardPwd from cardinfo where id >400000 and id <=450000
+select cardNo,cardPwd from cardinfo where id >450000 and id <=500000
+
+select cardNo,cardPwd from cardinfo where id >500000 and id <=550000
+select cardNo,cardPwd from cardinfo where id >550000 and id <=600000
+
+
+select cardNo,cardPwd from cardinfo where id >600000 and id <=650000
+select cardNo,cardPwd from cardinfo where id >650000 and id <=700000
+
+select cardNo,cardPwd from cardinfo where id >700000 and id <=750000
+select cardNo,cardPwd from cardinfo where id >750000 and id <=800000
+
+select cardNo,cardPwd from cardinfo where id >800000 and id <=850000
+select cardNo,cardPwd from cardinfo where id >850000 and id <=900000
+
+
+select cardNo,cardPwd from cardinfo where id >900000 and id <=950000
+select cardNo,cardPwd from cardinfo where id >950000 and id <=1000000
+-----------------------------------------------------------------------------
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','b')  where id >50000 and id <=100000;
+COMMIT;
+
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','c')  where id >100000 and id <=150000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','d')  where id >150000 and id <=200000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','e')  where id >200000 and id <=250000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','f')  where id >250000 and id <=300000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','g')  where id >300000 and id <=350000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','h')  where id >350000 and id <=400000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','i')  where id >400000 and id <=450000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','j')  where id >450000 and id <=500000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','k')  where id >500000 and id <=550000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','L')  where id >550000 and id <=600000;
+COMMIT;
+
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','M')  where id >600000 and id <=650000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','N')  where id >650000 and id <=700000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','P')  where id >700000 and id <=750000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','Q')  where id >750000 and id <=800000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','R')  where id >800000 and id <=850000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','S')  where id >850000 and id <=900000;
+COMMIT;
+
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','T')  where id >900000 and id <=950000;
+COMMIT;
+UPDATE cardinfo SET cardNo=REPLACE(cardNo,'a','U')  where id >950000 and id <=1000000;
+COMMIT;
